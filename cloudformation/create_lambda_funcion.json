@@ -1,0 +1,20 @@
+{
+"AWSTemplateFormatVersion": "2010-09-09",
+"Resources": {
+  "CreateFunctionTest": {
+    "Type" : "AWS::Lambda::Function",
+    "Properties" : {
+        "Code" : {
+            "S3Bucket": "insert bucket name",
+            "S3Key": "insert path of your code file(.zip) example: teste-funciotn-cloudformation/teste-funciotn-cloudformation.zip"
+        },
+        "Description" : "insert your description here",
+        "FunctionName" : "insert function name here",
+        "Handler" : "lambda_function.lambda_handler",
+        "Role" : "arn:aws:iam::insert your account ID here:role/insert your hole for lambda here",
+        "Runtime" : "python3.9",
+        "Timeout" : 300
+      }
+    }
+  }
+}
